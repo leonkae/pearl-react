@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { Fragment } from "react/jsx-runtime";
+import Nav from "./components/navComponent.js";
 
+const name = "Andre"
+const title = <h1>React Website</h1>
 function App() {
+  const subtitle = <h2>A lesson in JSX</h2>
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div>
+      <Nav/>
+      {title}
+      {subtitle}
+      <h1>Title is </h1>
+      <h2>My name is {name}</h2>
+
     </div>
+    
   );
 }
 
